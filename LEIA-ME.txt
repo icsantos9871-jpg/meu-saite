@@ -1,0 +1,10 @@
+<!-- 
+  Coloque sua foto de perfil aqui com o nome: foto-perfil.jpg
+  
+  Tamanho recomendado: 400x400px (quadrada)
+  Formatos aceitos: .jpg, .jpeg, .png, .webp
+  
+  Depois de adicionar a foto, edite o index.html:
+  1. Descomente: <img src="assets/imagens/foto-perfil.jpg" alt="Foto de perfil" />
+  2. Comente/remova: <div class="hero-foto-placeholder">👨‍💻</div>
+-->

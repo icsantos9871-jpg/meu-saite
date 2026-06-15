@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       contato.html — Página de Contato
+       Blog Pessoal | GitHub Pages
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato comigo." />
+  <title>DEV.BLOG | Contato</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+
+  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav-logo">
+        &lt;<span>DEV</span>.BLOG/&gt;
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO DA PÁGINA ─────────────────────────────────────── -->
+  <div class="contato-hero container">
+    <span class="tag" style="margin-bottom:1rem; display:inline-block;">// CONTATO</span>
+    <h1 style="color:var(--cor-neon); text-shadow:var(--sombra-neon); margin-bottom:1rem;">
+      Vamos Conversar?
+    </h1>
+    <p style="color:var(--cor-texto-suave); max-width:450px; margin:0 auto;">
+      Estou aberto a oportunidades, colaborações e boas ideias.
+      Me envie uma mensagem!
+    </p>
+  </div>
+
+  <!-- ── SEÇÃO CONTATO ──────────────────────────────────────── -->
+  <section style="padding-top:2rem;">
+    <div class="container">
+      <div class="grid-contato">
+
+        <!-- Informações de contato -->
+        <div class="contato-info revelar">
+          <h3>// Informações</h3>
+
+          <div class="contato-item">
+            <div class="icone">📧</div>
+            <div>
+              <div style="font-size:0.78rem; color:var(--cor-texto-suave); font-family:var(--fonte-mono);">E-MAIL</div>
+              <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <div class="icone">📍</div>
+            <div>
+              <div style="font-size:0.78rem; color:var(--cor-texto-suave); font-family:var(--fonte-mono);">LOCALIZAÇÃO</div>
+              <span>Sua Cidade, Brasil</span>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <div class="icone">⏰</div>
+            <div>
+              <div style="font-size:0.78rem; color:var(--cor-texto-suave); font-family:var(--fonte-mono);">RESPOSTA</div>
+              <span>Em até 24 horas</span>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <div class="icone">🟢</div>
+            <div>
+              <div style="font-size:0.78rem; color:var(--cor-texto-suave); font-family:var(--fonte-mono);">STATUS</div>
+              <span style="color:var(--cor-neon);">Disponível para trabalho</span>
+            </div>
+          </div>
+
+          <!-- Redes sociais -->
+          <div style="margin-top:2rem;">
+            <h4 style="font-size:0.85rem; color:var(--cor-neon); font-family:var(--fonte-mono); margin-bottom:1rem;">
+              &gt; Redes Sociais
+            </h4>
+            <div class="redes-sociais">
+              <a href="#" class="rede" aria-label="GitHub" title="GitHub">GH</a>
+              <a href="#" class="rede" aria-label="LinkedIn" title="LinkedIn">LI</a>
+              <a href="#" class="rede" aria-label="Twitter" title="Twitter">TW</a>
+              <a href="#" class="rede" aria-label="Instagram" title="Instagram">IG</a>
+            </div>
+          </div>
+
+          <!-- Card motivacional -->
+          <div class="card" style="margin-top:2rem; background:rgba(0,245,212,0.05);">
+            <p style="font-size:0.9rem; font-style:italic; color:var(--cor-texto-suave); margin:0;">
+              "O melhor momento para começar foi ontem. O segundo melhor é agora."
+            </p>
+            <p style="font-size:0.78rem; color:var(--cor-neon); margin:0.5rem 0 0; font-family:var(--fonte-mono);">
+              — Provérbio dev
+            </p>
+          </div>
+        </div>
+
+        <!-- Formulário de contato -->
+        <div class="revelar">
+          <div class="card">
+            <h3 style="color:var(--cor-neon); margin-bottom:1.5rem; font-size:1rem; font-family:var(--fonte-mono);">
+              &gt; Enviar Mensagem
+            </h3>
+
+            <!--
+              Formulário com validação via JavaScript (app.js)
+              id="form-contato" é necessário para o JS funcionar
+            -->
+            <form id="form-contato" novalidate>
+
+              <!-- Nome -->
+              <div class="form-grupo">
+                <label for="nome">NOME *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome completo"
+                  required
+                  data-min="3"
+                  autocomplete="name"
+                />
+                <span class="erro-msg" role="alert"></span>
+              </div>
+
+              <!-- E-mail -->
+              <div class="form-grupo">
+                <label for="email">E-MAIL *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                  autocomplete="email"
+                />
+                <span class="erro-msg" role="alert"></span>
+              </div>
+
+              <!-- Assunto -->
+              <div class="form-grupo">
+                <label for="assunto">ASSUNTO</label>
+                <select id="assunto" name="assunto">
+                  <option value="">Selecione um assunto...</option>
+                  <option value="oportunidade">Oportunidade de trabalho</option>
+                  <option value="colaboracao">Colaboração em projeto</option>
+                  <option value="duvida">Dúvida técnica</option>
+                  <option value="feedback">Feedback do blog</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="form-grupo">
+                <label for="mensagem">MENSAGEM *</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Escreva sua mensagem aqui..."
+                  required
+                  data-min="20"
+                  rows="5"
+                ></textarea>
+                <span class="erro-msg" role="alert"></span>
+              </div>
+
+              <!-- Botão de envio -->
+              <button type="submit" class="btn btn-secundario" style="width:100%;">
+                🚀 Enviar Mensagem
+              </button>
+
+              <p style="font-size:0.75rem; color:var(--cor-texto-suave); margin-top:1rem; text-align:center; font-family:var(--fonte-mono);">
+                * Campos obrigatórios. Respondo em até 24h.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────────── -->
+  <section>
+    <div class="container">
+      <h2 class="section-title revelar">// Perguntas Frequentes</h2>
+
+      <div class="grid-projetos revelar">
+        <div class="card">
+          <h4 style="color:var(--cor-neon); margin-bottom:0.75rem;">Você aceita freelas?</h4>
+          <p style="font-size:0.88rem; color:var(--cor-texto-suave); margin:0;">
+            Sim! Estou aberto a projetos freelancer, especialmente sites
+            institucionais, landing pages e pequenas aplicações web.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="color:var(--cor-neon); margin-bottom:0.75rem;">Qual seu stack preferido?</h4>
+          <p style="font-size:0.88rem; color:var(--cor-texto-suave); margin:0;">
+            Atualmente trabalho com HTML5, CSS3 e JavaScript vanilla.
+            Estou estudando React para expandir meu repertório front-end.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="color:var(--cor-neon); margin-bottom:0.75rem;">Trabalha remoto?</h4>
+          <p style="font-size:0.88rem; color:var(--cor-texto-suave); margin:0;">
+            Sim, prefiro trabalho remoto mas estou aberto a posições híbridas
+            dependendo da localização e oportunidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
+          <p class="footer-desc">Vamos construir algo incrível juntos.</p>
+        </div>
+        <div>
+          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-titulo">REDES</h4>
+          <div class="redes-sociais">
+            <a href="#" class="rede" aria-label="GitHub">GH</a>
+            <a href="#" class="rede" aria-label="LinkedIn">LI</a>
+            <a href="#" class="rede" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="ano-footer"></span> DEV.BLOG</span>
+        <span style="color:var(--cor-neon);">Feito com ❤️ e ☕</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

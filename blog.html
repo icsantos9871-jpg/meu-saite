@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       blog.html — Página do Blog
+       Blog Pessoal | GitHub Pages
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artigos sobre HTML, CSS, JavaScript e desenvolvimento web." />
+  <title>DEV.BLOG | Blog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+
+  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav-logo">
+        &lt;<span>DEV</span>.BLOG/&gt;
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO DO BLOG ───────────────────────────────────────── -->
+  <div class="blog-hero container">
+    <span class="tag" style="margin-bottom:1rem; display:inline-block;">// BLOG</span>
+    <h1 style="color:var(--cor-neon); text-shadow:var(--sombra-neon); margin-bottom:1rem;">
+      Artigos & Tutoriais
+    </h1>
+    <p style="color:var(--cor-texto-suave); max-width:500px; margin:0 auto;">
+      Compartilhando o que aprendo sobre HTML, CSS, JavaScript e a jornada
+      no desenvolvimento web.
+    </p>
+  </div>
+
+  <!-- ── FILTROS ────────────────────────────────────────────── -->
+  <section style="padding-top:0;">
+    <div class="container">
+
+      <div class="filtros-blog">
+        <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="html-css">HTML &amp; CSS</button>
+        <button class="filtro-btn" data-filtro="javascript">JavaScript</button>
+        <button class="filtro-btn" data-filtro="carreira">Carreira</button>
+        <button class="filtro-btn" data-filtro="ferramentas">Ferramentas</button>
+      </div>
+
+      <!-- ── GRID DE POSTS ──────────────────────────────────── -->
+      <div class="grid-blog">
+
+        <!-- Post 1 — HTML/CSS -->
+        <article class="card card-blog revelar" data-categoria="html-css">
+          <div class="card-blog-img">📐</div>
+          <div class="meta">
+            <span>📅 10 Jun 2025</span>
+            <span class="tag">HTML/CSS</span>
+            <span style="color:var(--cor-texto-suave)">8 min</span>
+          </div>
+          <h3>CSS Grid vs Flexbox: Quando usar cada um?</h3>
+          <p>
+            Entenda as diferenças fundamentais entre os dois modelos de layout
+            do CSS e aprenda quando aplicar cada um para criar layouts eficientes
+            e responsivos em seus projetos.
+          </p>
+          <a href="#post-1" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 2 — JavaScript -->
+        <article class="card card-blog revelar" data-categoria="javascript">
+          <div class="card-blog-img">⚡</div>
+          <div class="meta">
+            <span>📅 03 Jun 2025</span>
+            <span class="tag">JavaScript</span>
+            <span style="color:var(--cor-texto-suave)">10 min</span>
+          </div>
+          <h3>Async/Await: Simplificando código assíncrono</h3>
+          <p>
+            Como usar async/await para tornar seu código JavaScript mais legível
+            e fácil de manter, substituindo callbacks aninhados e o encadeamento
+            de Promises por uma sintaxe mais clara.
+          </p>
+          <a href="#post-2" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 3 — Carreira -->
+        <article class="card card-blog revelar" data-categoria="carreira">
+          <div class="card-blog-img">🚀</div>
+          <div class="meta">
+            <span>📅 28 Mai 2025</span>
+            <span class="tag">Carreira</span>
+            <span style="color:var(--cor-texto-suave)">6 min</span>
+          </div>
+          <h3>Minha jornada aprendendo desenvolvimento web</h3>
+          <p>
+            Como comecei do zero no desenvolvimento web: os recursos que usei,
+            os desafios que enfrentei e o que aprendi nos primeiros meses
+            estudando HTML, CSS e JavaScript.
+          </p>
+          <a href="#post-3" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 4 — Ferramentas -->
+        <article class="card card-blog revelar" data-categoria="ferramentas">
+          <div class="card-blog-img">🛠️</div>
+          <div class="meta">
+            <span>📅 20 Mai 2025</span>
+            <span class="tag">Ferramentas</span>
+            <span style="color:var(--cor-texto-suave)">5 min</span>
+          </div>
+          <h3>VS Code: As extensões que todo dev web precisa</h3>
+          <p>
+            Uma seleção das melhores extensões para o VS Code que aumentam a
+            produtividade no desenvolvimento front-end, desde autocompletar
+            até formatação automática.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 5 — HTML/CSS -->
+        <article class="card card-blog revelar" data-categoria="html-css">
+          <div class="card-blog-img">🎨</div>
+          <div class="meta">
+            <span>📅 15 Mai 2025</span>
+            <span class="tag">HTML/CSS</span>
+            <span style="color:var(--cor-texto-suave)">7 min</span>
+          </div>
+          <h3>Variáveis CSS: Organize seu design system</h3>
+          <p>
+            Aprenda a usar custom properties (variáveis CSS) para criar um
+            design system consistente, facilitando a manutenção e o
+            reuso de estilos em todo o projeto.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 6 — JavaScript -->
+        <article class="card card-blog revelar" data-categoria="javascript">
+          <div class="card-blog-img">🔍</div>
+          <div class="meta">
+            <span>📅 08 Mai 2025</span>
+            <span class="tag">JavaScript</span>
+            <span style="color:var(--cor-texto-suave)">9 min</span>
+          </div>
+          <h3>DOM Manipulation: Seleção e manipulação de elementos</h3>
+          <p>
+            Guia prático de manipulação do DOM com JavaScript vanilla:
+            selecionar elementos, criar, modificar e remover nós,
+            além de trabalhar com eventos.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POSTS EXPANDIDOS ───────────────────────────────────── -->
+
+  <!-- Post 1 completo -->
+  <section id="post-1" style="background:rgba(10,22,40,0.6);">
+    <div class="post-conteudo">
+      <span class="tag">HTML/CSS</span>
+      <h1 style="margin-top:1rem;">CSS Grid vs Flexbox: Quando usar cada um?</h1>
+      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
+        📅 10 Jun 2025 &nbsp;·&nbsp; ⏱️ 8 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
+      </div>
+
+      <p>
+        Dois dos recursos mais poderosos do CSS moderno são o Flexbox e o Grid.
+        Embora ambos sirvam para criar layouts, eles têm filosofias e casos de uso
+        diferentes. Entender quando usar cada um é fundamental para escrever CSS
+        eficiente e semântico.
+      </p>
+
+      <h2>O que é Flexbox?</h2>
+      <p>
+        O Flexbox (Flexible Box Layout) é um modelo de layout unidimensional.
+        Ele é ideal para organizar itens em uma única linha ou coluna. Pense nele
+        como um sistema para distribuir espaço entre itens ao longo de um eixo.
+      </p>
+      <p>
+        Use Flexbox quando precisar alinhar itens em uma barra de navegação,
+        centralizar um elemento na tela, ou organizar botões side by side.
+        A propriedade <code>justify-content</code> controla o eixo principal,
+        e <code>align-items</code> controla o eixo cruzado.
+      </p>
+
+      <h2>O que é CSS Grid?</h2>
+      <p>
+        O CSS Grid é um modelo de layout bidimensional. Ele permite controlar
+        linhas e colunas simultaneamente, sendo perfeito para layouts de página
+        inteiros, galerias de fotos e qualquer estrutura que precise de controle
+        preciso em dois eixos.
+      </p>
+      <p>
+        Com Grid, você define a estrutura no contêiner pai usando
+        <code>grid-template-columns</code> e <code>grid-template-rows</code>,
+        e os filhos se posicionam nessa grade.
+      </p>
+
+      <h2>Regra geral</h2>
+      <p>
+        Componente → Flexbox. Página inteira → Grid. Na prática, você usará
+        ambos juntos: Grid para o layout macro da página, e Flexbox dentro de
+        cada componente para alinhar seus elementos internos. Não existe rivalidade
+        — eles se complementam perfeitamente.
+      </p>
+    </div>
+  </section>
+
+  <!-- Post 2 completo -->
+  <section id="post-2">
+    <div class="post-conteudo">
+      <span class="tag">JavaScript</span>
+      <h1 style="margin-top:1rem;">Async/Await: Simplificando código assíncrono</h1>
+      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
+        📅 03 Jun 2025 &nbsp;·&nbsp; ⏱️ 10 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
+      </div>
+
+      <p>
+        Código assíncrono é inevitável no JavaScript moderno. Seja buscando dados
+        de uma API, lendo arquivos ou esperando timers, precisamos de formas eficientes
+        de lidar com operações que levam tempo. O async/await chegou para tornar
+        esse processo muito mais legível.
+      </p>
+
+      <h2>O problema com callbacks</h2>
+      <p>
+        No início do JavaScript, usávamos callbacks para lidar com código assíncrono.
+        Mas aninhar múltiplas operações assíncronas criava o famoso "callback hell",
+        um triângulo de funções aninhadas difícil de ler e manter.
+      </p>
+
+      <h2>Promises: uma melhoria</h2>
+      <p>
+        As Promises melhoraram a situação, permitindo encadear operações com
+        <code>.then()</code> e capturar erros com <code>.catch()</code>. Mas ainda
+        assim, o código resultante podia ficar verboso e difícil de rastrear.
+      </p>
+
+      <h2>Async/Await: o melhor dos mundos</h2>
+      <p>
+        Com <code>async/await</code>, escrevemos código assíncrono que parece
+        síncrono. Uma função marcada com <code>async</code> sempre retorna uma
+        Promise, e dentro dela podemos usar <code>await</code> para pausar a
+        execução até que a Promise seja resolvida. Use sempre com
+        <code>try/catch</code> para tratar erros de forma elegante.
+      </p>
+    </div>
+  </section>
+
+  <!-- Post 3 completo -->
+  <section id="post-3" style="background:rgba(10,22,40,0.6);">
+    <div class="post-conteudo">
+      <span class="tag">Carreira</span>
+      <h1 style="margin-top:1rem;">Minha jornada aprendendo desenvolvimento web</h1>
+      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
+        📅 28 Mai 2025 &nbsp;·&nbsp; ⏱️ 6 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
+      </div>
+
+      <p>
+        Todo desenvolvedor tem uma história de como começou. A minha começa com
+        curiosidade sobre como os sites eram construídos, uma busca no Google,
+        e um tutorial de HTML que mudou minha direção.
+      </p>
+
+      <h2>O começo: HTML e CSS</h2>
+      <p>
+        Minha primeira linha de código foi um simples <code>&lt;h1&gt;Olá, mundo!&lt;/h1&gt;</code>.
+        Parece pouco, mas ver aquele texto aparecer no navegador foi eletrizante.
+        Nas semanas seguintes me dediquei a entender HTML semântico e CSS básico,
+        construindo páginas simples para praticar cada conceito novo.
+      </p>
+
+      <h2>JavaScript: o pulo do gato</h2>
+      <p>
+        Quando cheguei ao JavaScript, o nível de complexidade subiu bastante.
+        Variáveis, funções, eventos, DOM — muita coisa de uma vez. O segredo foi
+        não tentar aprender tudo de uma vez, mas construir pequenos projetos
+        que usassem cada conceito aprendido.
+      </p>
+
+      <h2>O que aprendi com tudo isso</h2>
+      <p>
+        Consistência supera intensidade. Estudar 30 minutos por dia, todos os dias,
+        trouxe mais resultado do que maratonas ocasionais. Construir projetos reais,
+        mesmo pequenos e imperfeitos, é a forma mais rápida de aprender. E a
+        comunidade de desenvolvedores é incrível — não tenha medo de pedir ajuda.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
+          <p class="footer-desc">Artigos sobre desenvolvimento web, carreira e tecnologia.</p>
+        </div>
+        <div>
+          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-titulo">CONTATO</h4>
+          <p style="font-size:0.85rem; color:var(--cor-texto-suave);">📧 seuemail@exemplo.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="ano-footer"></span> DEV.BLOG</span>
+        <span style="color:var(--cor-neon);">Feito com ❤️ e muito CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       index.html — Página Inicial
+       Blog Pessoal | GitHub Pages
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog pessoal de tecnologia — projetos, artigos e currículo." />
+  <title>DEV.BLOG | Início</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Folha de estilo principal -->
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+
+  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="nav-logo">
+        &lt;<span>DEV</span>.BLOG/&gt;
+      </a>
+
+      <!-- Botão hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Badge de status -->
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Disponível para projetos
+        </div>
+
+        <!-- Título principal -->
+        <h1 class="hero-titulo">
+          Olá, sou
+          <span class="destaque">Seu Nome</span>
+        </h1>
+
+        <!-- Typewriter dinâmico -->
+        <p class="hero-subtitulo">
+          <span id="typewriter">Desenvolvedor Full Stack</span>
+          <span style="color:var(--cor-neon); animation: piscar 1s infinite">|</span>
+        </p>
+
+        <p style="color:var(--cor-texto-suave); margin-bottom:2.5rem; max-width:520px;">
+          Apaixonado por código limpo, interfaces incríveis e resolver problemas
+          com tecnologia. Aqui compartilho projetos, artigos e minha jornada no
+          desenvolvimento web.
+        </p>
+
+        <!-- Botões CTA -->
+        <div class="hero-btns">
+          <a href="blog.html" class="btn btn-secundario">
+            📝 Ver Blog
+          </a>
+          <a href="curriculo.html" class="btn btn-primario">
+            📄 Currículo
+          </a>
+          <a href="contato.html" class="btn btn-acento btn-sm">
+            💬 Contato
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto de perfil -->
+      <div class="hero-foto" aria-hidden="true">
+        <!-- Substitua pelo caminho da sua foto -->
+        <!-- <img src="assets/imagens/foto-perfil.jpg" alt="Foto de perfil" /> -->
+        <div class="hero-foto-placeholder">👨‍💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ──────────────────────────────────────────────── -->
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title revelar">// Sobre Mim</h2>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div class="revelar">
+          <p>
+            Estudante de <strong style="color:var(--cor-neon)">Desenvolvimento Web</strong>
+            apaixonado por criar experiências digitais memoráveis. Tenho me dedicado ao
+            estudo de HTML, CSS e JavaScript para construir sites modernos e responsivos.
+          </p>
+          <p>
+            Acredito que um bom código vai além de funcionar — ele precisa ser legível,
+            organizado e sustentável. Busco constantemente evoluir como desenvolvedor e
+            contribuir com projetos que causem impacto real.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="revelar" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">3+</div>
+            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Projetos Concluídos</div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">3</div>
+            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Posts no Blog</div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-acento); text-shadow:var(--sombra-acento);">100%</div>
+            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">HTML/CSS Puro</div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">∞</div>
+            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Vontade de Aprender</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ───────────────────────────────────────────── -->
+  <section id="projetos">
+    <div class="container">
+      <h2 class="section-title revelar">// Projetos</h2>
+
+      <div class="grid-projetos">
+        <!-- Projeto 1 -->
+        <div class="card card-projeto revelar">
+          <span class="projeto-icon">🌐</span>
+          <h3>Site de Portfólio</h3>
+          <p>
+            Site pessoal completo com seções de projetos, blog e currículo.
+            Desenvolvido com HTML, CSS e JavaScript puros.
+          </p>
+          <div class="projeto-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="projeto-links">
+            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
+            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="card card-projeto revelar">
+          <span class="projeto-icon">📋</span>
+          <h3>To-Do List App</h3>
+          <p>
+            Aplicação de lista de tarefas com funcionalidades de adicionar,
+            editar, excluir e filtrar por status.
+          </p>
+          <div class="projeto-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">LocalStorage</span>
+            <span class="tag">CSS Grid</span>
+          </div>
+          <div class="projeto-links">
+            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
+            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="card card-projeto revelar">
+          <span class="projeto-icon">🌤️</span>
+          <h3>Previsão do Tempo</h3>
+          <p>
+            Aplicação de clima que consome API externa, exibindo
+            temperatura, umidade e previsão dos próximos dias.
+          </p>
+          <div class="projeto-tags">
+            <span class="tag">API REST</span>
+            <span class="tag">Fetch</span>
+            <span class="tag">Async/Await</span>
+          </div>
+          <div class="projeto-links">
+            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
+            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG (PRÉVIA) ──────────────────────────────────────── -->
+  <section id="blog-preview">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
+        <h2 class="section-title" style="margin-bottom:0;">// Últimos Posts</h2>
+        <a href="blog.html" class="btn btn-primario btn-sm">Ver todos →</a>
+      </div>
+
+      <div class="grid-blog">
+        <!-- Post 1 -->
+        <article class="card card-blog revelar" data-categoria="html-css">
+          <div class="card-blog-img">📐</div>
+          <div class="meta">
+            <span>📅 10 Jun 2025</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+          <h3>CSS Grid vs Flexbox: Quando usar cada um?</h3>
+          <p>
+            Entenda as diferenças fundamentais entre os dois modelos de layout
+            do CSS e quando aplicar cada um nos seus projetos.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card card-blog revelar" data-categoria="javascript">
+          <div class="card-blog-img">⚡</div>
+          <div class="meta">
+            <span>📅 03 Jun 2025</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <h3>Async/Await: Simplificando código assíncrono</h3>
+          <p>
+            Como usar async/await para tornar seu código JavaScript mais
+            legível e fácil de manter, substituindo callbacks e Promises.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card card-blog revelar" data-categoria="carreira">
+          <div class="card-blog-img">🚀</div>
+          <div class="meta">
+            <span>📅 28 Mai 2025</span>
+            <span class="tag">Carreira</span>
+          </div>
+          <h3>Minha jornada aprendendo desenvolvimento web</h3>
+          <p>
+            Como comecei do zero, os recursos que usei, os desafios que enfrentei
+            e o que aprendi nos primeiros meses estudando programação.
+          </p>
+          <a href="#" class="ler-mais">Ler artigo →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
+          <p class="footer-desc">
+            Blog pessoal sobre desenvolvimento web, tecnologia e
+            minha jornada como desenvolvedor. Feito com HTML, CSS e JS puros.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-titulo">REDES</h4>
+          <div class="redes-sociais" style="margin-bottom:1rem;">
+            <a href="#" class="rede" aria-label="GitHub" title="GitHub">GH</a>
+            <a href="#" class="rede" aria-label="LinkedIn" title="LinkedIn">LI</a>
+            <a href="#" class="rede" aria-label="Twitter" title="Twitter">TW</a>
+          </div>
+          <p style="font-size:0.82rem; color:var(--cor-texto-suave);">
+            📧 seuemail@exemplo.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="ano-footer"></span> DEV.BLOG — Todos os direitos reservados</span>
+        <span style="color:var(--cor-neon); font-size:0.75rem;">Feito com ❤️ e muita ☕</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
