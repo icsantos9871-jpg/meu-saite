@@ -1,291 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ============================================================
-       curriculo.html — Página Currículo
-       Blog Pessoal | GitHub Pages
-       ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Currículo e habilidades técnicas." />
-  <title>DEV.BLOG | Currículo</title>
+  <meta name="description" content="Currículo de Ivanilson Santos — formação, experiências e habilidades." />
+  <meta name="theme-color" content="#0d1117" />
+  <title>Currículo | Ivanilson Santos</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/estilo.css" />
 </head>
 <body>
-
-  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
-  <header>
-    <nav class="container">
-      <a href="index.html" class="nav-logo">
-        &lt;<span>DEV</span>.BLOG/&gt;
-      </a>
-
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html">Contato</a></li>
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="index.html" class="nav__logo">Ivanilson<span>.dev</span></a>
+      <ul class="nav__lista" id="menu">
+        <li><a href="index.html" class="nav__link">Início</a></li>
+        <li><a href="index.html#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="curriculo.html" class="nav__link" aria-current="page">Currículo</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="contato.html" class="nav__link">Contato</a></li>
       </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
     </nav>
   </header>
 
-  <!-- ── HEADER DO CURRÍCULO ────────────────────────────────── -->
-  <div class="curriculo-header container">
-    <div class="avatar">👨‍💻</div>
-    <h1 style="color:var(--cor-neon); text-shadow:var(--sombra-neon); margin-bottom:0.5rem;">
-      Seu Nome Completo
-    </h1>
-    <p style="color:var(--cor-texto-suave); margin-bottom:1.5rem; font-family:var(--fonte-mono);">
-      Desenvolvedor Web Full Stack
-    </p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <span class="tag">📍 Sua Cidade, Brasil</span>
-      <span class="tag">📧 seuemail@exemplo.com</span>
-      <span class="tag">💼 Disponível</span>
-    </div>
-    <div style="margin-top:1.5rem;">
-      <a href="#" class="btn btn-secundario" download>
-        ⬇️ Baixar PDF
-      </a>
-    </div>
-  </div>
-
-  <!-- ── RESUMO ─────────────────────────────────────────────── -->
-  <section>
-    <div class="container">
-      <h2 class="section-title revelar">// Resumo Profissional</h2>
-      <div class="card revelar" style="max-width:800px;">
-        <p style="font-size:1rem; line-height:1.8; color:var(--cor-texto);">
-          Estudante de desenvolvimento web com foco em tecnologias front-end modernas.
-          Tenho habilidade em HTML5 semântico, CSS responsivo com Flexbox e Grid,
-          e JavaScript para interatividade. Busco minha primeira oportunidade profissional
-          para aplicar os conhecimentos adquiridos e crescer como desenvolvedor em um
-          ambiente colaborativo e desafiador.
+  <main>
+    <!-- ===================== CABEÇALHO DA PÁGINA ===================== -->
+    <header class="page-header">
+      <div class="container">
+        <h1 class="page-header__titulo">Currículo</h1>
+        <p class="page-header__subtitulo">
+          Minha formação acadêmica, experiências e habilidades técnicas e
+          interpessoais.
         </p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ── HABILIDADES + EXPERIÊNCIA ──────────────────────────── -->
-  <section>
-    <div class="container">
-      <h2 class="section-title revelar">// Habilidades & Experiência</h2>
+    <!-- ===================== FORMAÇÃO E EXPERIÊNCIA ===================== -->
+    <section class="secao" aria-labelledby="titulo-trajetoria" style="border-top: none; padding-top: 0;">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo" id="titulo-trajetoria">Trajetória</h2>
+          <p class="secao__subtitulo">Formação acadêmica e experiências.</p>
+        </header>
 
-      <div class="grid-curriculo">
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__periodo">2024 — Atual</p>
+            <h3 class="timeline__titulo">Curso de Desenvolvimento Web</h3>
+            <p class="timeline__texto">
+              Formação focada na construção de páginas e aplicações para a web
+              utilizando HTML, CSS e JavaScript, com ênfase em boas práticas e
+              projetos reais.
+            </p>
+          </li>
 
-        <!-- Habilidades técnicas -->
-        <div class="revelar">
-          <h3 style="color:var(--cor-neon); margin-bottom:1.5rem; font-size:1rem; font-family:var(--fonte-mono);">
-            &gt; Habilidades Técnicas
-          </h3>
+          <li class="timeline__item">
+            <p class="timeline__periodo">2024</p>
+            <h3 class="timeline__titulo">Projetos práticos do curso</h3>
+            <p class="timeline__texto">
+              Desenvolvimento de landing page, site de cinema, cardápio de
+              hamburgueria, formulário com validação e a landing page de um
+              dicionário técnico inglês-português.
+            </p>
+          </li>
 
-          <!-- HTML5 -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>HTML5</span>
-              <span>90%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="90"></div>
-            </div>
+          <li class="timeline__item">
+            <p class="timeline__periodo">2023</p>
+            <h3 class="timeline__titulo">Estudos de Front-end</h3>
+            <p class="timeline__texto">
+              Estudo de HTML, CSS e JavaScript por meio de cursos online e
+              projetos pessoais publicados no GitHub.
+            </p>
+          </li>
+
+          <li class="timeline__item">
+            <p class="timeline__periodo">2022</p>
+            <h3 class="timeline__titulo">Ensino Médio concluído</h3>
+            <p class="timeline__texto">
+              Conclusão do ensino médio, período em que descobri o interesse
+              pela área de tecnologia e desenvolvimento web.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="secao" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo" id="titulo-habilidades">Habilidades</h2>
+          <p class="secao__subtitulo">Competências técnicas e interpessoais.</p>
+        </header>
+
+        <div class="habilidades">
+          <div class="habilidades__grupo">
+            <h3>Linguagens da Web</h3>
+            <ul class="habilidades__lista">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
           </div>
 
-          <!-- CSS3 -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>CSS3 / Flexbox / Grid</span>
-              <span>85%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="85"></div>
-            </div>
+          <div class="habilidades__grupo">
+            <h3>Ferramentas</h3>
+            <ul class="habilidades__lista">
+              <li class="tag">Git</li>
+              <li class="tag">GitHub</li>
+              <li class="tag">VS Code</li>
+            </ul>
           </div>
 
-          <!-- JavaScript -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>JavaScript ES6+</span>
-              <span>75%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="75"></div>
-            </div>
+          <div class="habilidades__grupo">
+            <h3>Conceitos</h3>
+            <ul class="habilidades__lista">
+              <li class="tag">Layout responsivo</li>
+              <li class="tag">Acessibilidade</li>
+              <li class="tag">Validação de formulários</li>
+            </ul>
           </div>
 
-          <!-- Responsivo -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>Design Responsivo</span>
-              <span>80%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="80"></div>
-            </div>
-          </div>
-
-          <!-- Git -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>Git & GitHub</span>
-              <span>70%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="70"></div>
-            </div>
-          </div>
-
-          <!-- Acessibilidade -->
-          <div class="habilidade">
-            <div class="hab-topo">
-              <span>Acessibilidade (A11y)</span>
-              <span>65%</span>
-            </div>
-            <div class="hab-barra">
-              <div class="hab-progresso" data-progresso="65"></div>
-            </div>
-          </div>
-
-          <!-- Outras habilidades -->
-          <div style="margin-top:2rem;">
-            <h4 style="font-size:0.85rem; color:var(--cor-neon); font-family:var(--fonte-mono); margin-bottom:1rem;">
-              &gt; Ferramentas & Outras Skills
-            </h4>
-            <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-              <span class="tag">VS Code</span>
-              <span class="tag">Chrome DevTools</span>
-              <span class="tag">GitHub Pages</span>
-              <span class="tag">Figma (básico)</span>
-              <span class="tag">Google Fonts</span>
-              <span class="tag">Metodologia BEM</span>
-              <span class="tag">SEO básico</span>
-              <span class="tag">CLI / Terminal</span>
-            </div>
+          <div class="habilidades__grupo">
+            <h3>Interpessoais</h3>
+            <ul class="habilidades__lista">
+              <li class="tag">Trabalho em equipe</li>
+              <li class="tag">Comunicação</li>
+              <li class="tag">Proatividade</li>
+              <li class="tag">Organização</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Timeline Educação + Experiência -->
-        <div class="revelar">
-          <h3 style="color:var(--cor-neon); margin-bottom:1.5rem; font-size:1rem; font-family:var(--fonte-mono);">
-            &gt; Formação Acadêmica
-          </h3>
-
-          <div class="timeline" style="margin-bottom:3rem;">
-            <div class="timeline-item">
-              <div class="periodo">2024 — Presente</div>
-              <h4>Tecnólogo em Desenvolvimento Web</h4>
-              <div class="empresa">Nome da Instituição</div>
-              <p style="font-size:0.85rem; color:var(--cor-texto-suave); margin-top:0.5rem;">
-                Disciplinas: HTML, CSS, JavaScript, Banco de Dados, Lógica de Programação,
-                UX/UI Design.
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="periodo">2023</div>
-              <h4>Curso de Fundamentos de Programação</h4>
-              <div class="empresa">Plataforma Online</div>
-              <p style="font-size:0.85rem; color:var(--cor-texto-suave); margin-top:0.5rem;">
-                Lógica de programação, algoritmos, estruturas de dados básicas.
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="periodo">2020 — 2022</div>
-              <h4>Ensino Médio Completo</h4>
-              <div class="empresa">Nome da Escola</div>
-            </div>
-          </div>
-
-          <h3 style="color:var(--cor-neon); margin-bottom:1.5rem; font-size:1rem; font-family:var(--fonte-mono);">
-            &gt; Experiência
-          </h3>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="periodo">Jun 2025 — Presente</div>
-              <h4>Freelancer Web</h4>
-              <div class="empresa">Autônomo</div>
-              <p style="font-size:0.85rem; color:var(--cor-texto-suave); margin-top:0.5rem;">
-                Desenvolvimento de sites institucionais e landing pages para
-                pequenos negócios locais utilizando HTML, CSS e JavaScript.
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="periodo">Projeto Acadêmico — 2025</div>
-              <h4>Blog Pessoal — GitHub Pages</h4>
-              <div class="empresa">Projeto de Curso</div>
-              <p style="font-size:0.85rem; color:var(--cor-texto-suave); margin-top:0.5rem;">
-                Site completo com 4 páginas, design responsivo, validação de
-                formulário e publicação no GitHub Pages.
-              </p>
-            </div>
-          </div>
+        <div style="margin-top: 2.5rem;">
+          <a href="contato.html" class="btn btn--primario">Quer trabalhar comigo? Fale aqui</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ── CERTIFICADOS ───────────────────────────────────────── -->
-  <section>
-    <div class="container">
-      <h2 class="section-title revelar">// Certificados & Cursos</h2>
-
-      <div class="grid-projetos revelar">
-        <div class="card">
-          <div style="font-size:2rem; margin-bottom:0.75rem;">🏆</div>
-          <h4>HTML & CSS — Fundamentos</h4>
-          <p style="font-size:0.85rem; color:var(--cor-texto-suave);">Plataforma Online · 2024 · 40h</p>
-        </div>
-        <div class="card">
-          <div style="font-size:2rem; margin-bottom:0.75rem;">🏆</div>
-          <h4>JavaScript Essencial</h4>
-          <p style="font-size:0.85rem; color:var(--cor-texto-suave);">Plataforma Online · 2024 · 60h</p>
-        </div>
-        <div class="card">
-          <div style="font-size:2rem; margin-bottom:0.75rem;">🏆</div>
-          <h4>Git & GitHub para Iniciantes</h4>
-          <p style="font-size:0.85rem; color:var(--cor-texto-suave);">YouTube / DIO · 2025 · 10h</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
-          <p class="footer-desc">Currículo e portfólio de Seu Nome.</p>
-        </div>
-        <div>
-          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="curriculo.html">Currículo</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-titulo">DOWNLOAD</h4>
-          <a href="#" class="btn btn-primario btn-sm" download>⬇️ Baixar CV</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="ano-footer"></span> DEV.BLOG</span>
-        <span style="color:var(--cor-neon);">Open to work 🟢</span>
-      </div>
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>&copy; <span id="ano"></span> Ivanilson Santos. Todos os direitos reservados.</p>
+      <ul class="rodape__sociais">
+        <li><a href="https://github.com/ivanilson-santos" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ivanilson-santos" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
 
