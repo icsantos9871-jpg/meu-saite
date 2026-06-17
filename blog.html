@@ -1,338 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ============================================================
-       blog.html — Página do Blog
-       Blog Pessoal | GitHub Pages
-       ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Artigos sobre HTML, CSS, JavaScript e desenvolvimento web." />
-  <title>DEV.BLOG | Blog</title>
+  <meta name="description" content="Blog de Ivanilson Santos — artigos sobre trajetória profissional, carreira em desenvolvimento e manutenção preventiva em TI." />
+  <meta name="theme-color" content="#0d1117" />
+  <title>Blog | Ivanilson Santos</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/estilo.css" />
 </head>
 <body>
-
-  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
-  <header>
-    <nav class="container">
-      <a href="index.html" class="nav-logo">
-        &lt;<span>DEV</span>.BLOG/&gt;
-      </a>
-
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html">Contato</a></li>
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="index.html" class="nav__logo">Ivanilson<span>.dev</span></a>
+      <ul class="nav__lista" id="menu">
+        <li><a href="index.html" class="nav__link">Início</a></li>
+        <li><a href="index.html#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="curriculo.html" class="nav__link">Currículo</a></li>
+        <li><a href="blog.html" class="nav__link" aria-current="page">Blog</a></li>
+        <li><a href="contato.html" class="nav__link">Contato</a></li>
       </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
     </nav>
   </header>
 
-  <!-- ── HERO DO BLOG ───────────────────────────────────────── -->
-  <div class="blog-hero container">
-    <span class="tag" style="margin-bottom:1rem; display:inline-block;">// BLOG</span>
-    <h1 style="color:var(--cor-neon); text-shadow:var(--sombra-neon); margin-bottom:1rem;">
-      Artigos & Tutoriais
-    </h1>
-    <p style="color:var(--cor-texto-suave); max-width:500px; margin:0 auto;">
-      Compartilhando o que aprendo sobre HTML, CSS, JavaScript e a jornada
-      no desenvolvimento web.
-    </p>
-  </div>
-
-  <!-- ── FILTROS ────────────────────────────────────────────── -->
-  <section style="padding-top:0;">
-    <div class="container">
-
-      <div class="filtros-blog">
-        <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
-        <button class="filtro-btn" data-filtro="html-css">HTML &amp; CSS</button>
-        <button class="filtro-btn" data-filtro="javascript">JavaScript</button>
-        <button class="filtro-btn" data-filtro="carreira">Carreira</button>
-        <button class="filtro-btn" data-filtro="ferramentas">Ferramentas</button>
-      </div>
-
-      <!-- ── GRID DE POSTS ──────────────────────────────────── -->
-      <div class="grid-blog">
-
-        <!-- Post 1 — HTML/CSS -->
-        <article class="card card-blog revelar" data-categoria="html-css">
-          <div class="card-blog-img">📐</div>
-          <div class="meta">
-            <span>📅 10 Jun 2025</span>
-            <span class="tag">HTML/CSS</span>
-            <span style="color:var(--cor-texto-suave)">8 min</span>
+  <main>
+    <!-- ===================== CABEÇALHO DA PÁGINA ===================== -->
+    <header class="page-header">
+      <div class="container">
+        <div class="blog-autor">
+          <img class="blog-autor__foto" src="assets/imagens/foto-perfil.jpg" alt="Foto de perfil de Ivanilson Santos" />
+          <div>
+            <h1 class="page-header__titulo">Blog</h1>
+            <p class="blog-autor__nome">por Ivanilson Santos</p>
           </div>
-          <h3>CSS Grid vs Flexbox: Quando usar cada um?</h3>
-          <p>
-            Entenda as diferenças fundamentais entre os dois modelos de layout
-            do CSS e aprenda quando aplicar cada um para criar layouts eficientes
-            e responsivos em seus projetos.
-          </p>
-          <a href="#post-1" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 2 — JavaScript -->
-        <article class="card card-blog revelar" data-categoria="javascript">
-          <div class="card-blog-img">⚡</div>
-          <div class="meta">
-            <span>📅 03 Jun 2025</span>
-            <span class="tag">JavaScript</span>
-            <span style="color:var(--cor-texto-suave)">10 min</span>
-          </div>
-          <h3>Async/Await: Simplificando código assíncrono</h3>
-          <p>
-            Como usar async/await para tornar seu código JavaScript mais legível
-            e fácil de manter, substituindo callbacks aninhados e o encadeamento
-            de Promises por uma sintaxe mais clara.
-          </p>
-          <a href="#post-2" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 3 — Carreira -->
-        <article class="card card-blog revelar" data-categoria="carreira">
-          <div class="card-blog-img">🚀</div>
-          <div class="meta">
-            <span>📅 28 Mai 2025</span>
-            <span class="tag">Carreira</span>
-            <span style="color:var(--cor-texto-suave)">6 min</span>
-          </div>
-          <h3>Minha jornada aprendendo desenvolvimento web</h3>
-          <p>
-            Como comecei do zero no desenvolvimento web: os recursos que usei,
-            os desafios que enfrentei e o que aprendi nos primeiros meses
-            estudando HTML, CSS e JavaScript.
-          </p>
-          <a href="#post-3" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 4 — Ferramentas -->
-        <article class="card card-blog revelar" data-categoria="ferramentas">
-          <div class="card-blog-img">🛠️</div>
-          <div class="meta">
-            <span>📅 20 Mai 2025</span>
-            <span class="tag">Ferramentas</span>
-            <span style="color:var(--cor-texto-suave)">5 min</span>
-          </div>
-          <h3>VS Code: As extensões que todo dev web precisa</h3>
-          <p>
-            Uma seleção das melhores extensões para o VS Code que aumentam a
-            produtividade no desenvolvimento front-end, desde autocompletar
-            até formatação automática.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 5 — HTML/CSS -->
-        <article class="card card-blog revelar" data-categoria="html-css">
-          <div class="card-blog-img">🎨</div>
-          <div class="meta">
-            <span>📅 15 Mai 2025</span>
-            <span class="tag">HTML/CSS</span>
-            <span style="color:var(--cor-texto-suave)">7 min</span>
-          </div>
-          <h3>Variáveis CSS: Organize seu design system</h3>
-          <p>
-            Aprenda a usar custom properties (variáveis CSS) para criar um
-            design system consistente, facilitando a manutenção e o
-            reuso de estilos em todo o projeto.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 6 — JavaScript -->
-        <article class="card card-blog revelar" data-categoria="javascript">
-          <div class="card-blog-img">🔍</div>
-          <div class="meta">
-            <span>📅 08 Mai 2025</span>
-            <span class="tag">JavaScript</span>
-            <span style="color:var(--cor-texto-suave)">9 min</span>
-          </div>
-          <h3>DOM Manipulation: Seleção e manipulação de elementos</h3>
-          <p>
-            Guia prático de manipulação do DOM com JavaScript vanilla:
-            selecionar elementos, criar, modificar e remover nós,
-            além de trabalhar com eventos.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── POSTS EXPANDIDOS ───────────────────────────────────── -->
-
-  <!-- Post 1 completo -->
-  <section id="post-1" style="background:rgba(10,22,40,0.6);">
-    <div class="post-conteudo">
-      <span class="tag">HTML/CSS</span>
-      <h1 style="margin-top:1rem;">CSS Grid vs Flexbox: Quando usar cada um?</h1>
-      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
-        📅 10 Jun 2025 &nbsp;·&nbsp; ⏱️ 8 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
-      </div>
-
-      <p>
-        Dois dos recursos mais poderosos do CSS moderno são o Flexbox e o Grid.
-        Embora ambos sirvam para criar layouts, eles têm filosofias e casos de uso
-        diferentes. Entender quando usar cada um é fundamental para escrever CSS
-        eficiente e semântico.
-      </p>
-
-      <h2>O que é Flexbox?</h2>
-      <p>
-        O Flexbox (Flexible Box Layout) é um modelo de layout unidimensional.
-        Ele é ideal para organizar itens em uma única linha ou coluna. Pense nele
-        como um sistema para distribuir espaço entre itens ao longo de um eixo.
-      </p>
-      <p>
-        Use Flexbox quando precisar alinhar itens em uma barra de navegação,
-        centralizar um elemento na tela, ou organizar botões side by side.
-        A propriedade <code>justify-content</code> controla o eixo principal,
-        e <code>align-items</code> controla o eixo cruzado.
-      </p>
-
-      <h2>O que é CSS Grid?</h2>
-      <p>
-        O CSS Grid é um modelo de layout bidimensional. Ele permite controlar
-        linhas e colunas simultaneamente, sendo perfeito para layouts de página
-        inteiros, galerias de fotos e qualquer estrutura que precise de controle
-        preciso em dois eixos.
-      </p>
-      <p>
-        Com Grid, você define a estrutura no contêiner pai usando
-        <code>grid-template-columns</code> e <code>grid-template-rows</code>,
-        e os filhos se posicionam nessa grade.
-      </p>
-
-      <h2>Regra geral</h2>
-      <p>
-        Componente → Flexbox. Página inteira → Grid. Na prática, você usará
-        ambos juntos: Grid para o layout macro da página, e Flexbox dentro de
-        cada componente para alinhar seus elementos internos. Não existe rivalidade
-        — eles se complementam perfeitamente.
-      </p>
-    </div>
-  </section>
-
-  <!-- Post 2 completo -->
-  <section id="post-2">
-    <div class="post-conteudo">
-      <span class="tag">JavaScript</span>
-      <h1 style="margin-top:1rem;">Async/Await: Simplificando código assíncrono</h1>
-      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
-        📅 03 Jun 2025 &nbsp;·&nbsp; ⏱️ 10 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
-      </div>
-
-      <p>
-        Código assíncrono é inevitável no JavaScript moderno. Seja buscando dados
-        de uma API, lendo arquivos ou esperando timers, precisamos de formas eficientes
-        de lidar com operações que levam tempo. O async/await chegou para tornar
-        esse processo muito mais legível.
-      </p>
-
-      <h2>O problema com callbacks</h2>
-      <p>
-        No início do JavaScript, usávamos callbacks para lidar com código assíncrono.
-        Mas aninhar múltiplas operações assíncronas criava o famoso "callback hell",
-        um triângulo de funções aninhadas difícil de ler e manter.
-      </p>
-
-      <h2>Promises: uma melhoria</h2>
-      <p>
-        As Promises melhoraram a situação, permitindo encadear operações com
-        <code>.then()</code> e capturar erros com <code>.catch()</code>. Mas ainda
-        assim, o código resultante podia ficar verboso e difícil de rastrear.
-      </p>
-
-      <h2>Async/Await: o melhor dos mundos</h2>
-      <p>
-        Com <code>async/await</code>, escrevemos código assíncrono que parece
-        síncrono. Uma função marcada com <code>async</code> sempre retorna uma
-        Promise, e dentro dela podemos usar <code>await</code> para pausar a
-        execução até que a Promise seja resolvida. Use sempre com
-        <code>try/catch</code> para tratar erros de forma elegante.
-      </p>
-    </div>
-  </section>
-
-  <!-- Post 3 completo -->
-  <section id="post-3" style="background:rgba(10,22,40,0.6);">
-    <div class="post-conteudo">
-      <span class="tag">Carreira</span>
-      <h1 style="margin-top:1rem;">Minha jornada aprendendo desenvolvimento web</h1>
-      <div class="meta" style="color:var(--cor-texto-suave); font-family:var(--fonte-mono); font-size:0.8rem; margin-bottom:2rem;">
-        📅 28 Mai 2025 &nbsp;·&nbsp; ⏱️ 6 min de leitura &nbsp;·&nbsp; ✍️ Seu Nome
-      </div>
-
-      <p>
-        Todo desenvolvedor tem uma história de como começou. A minha começa com
-        curiosidade sobre como os sites eram construídos, uma busca no Google,
-        e um tutorial de HTML que mudou minha direção.
-      </p>
-
-      <h2>O começo: HTML e CSS</h2>
-      <p>
-        Minha primeira linha de código foi um simples <code>&lt;h1&gt;Olá, mundo!&lt;/h1&gt;</code>.
-        Parece pouco, mas ver aquele texto aparecer no navegador foi eletrizante.
-        Nas semanas seguintes me dediquei a entender HTML semântico e CSS básico,
-        construindo páginas simples para praticar cada conceito novo.
-      </p>
-
-      <h2>JavaScript: o pulo do gato</h2>
-      <p>
-        Quando cheguei ao JavaScript, o nível de complexidade subiu bastante.
-        Variáveis, funções, eventos, DOM — muita coisa de uma vez. O segredo foi
-        não tentar aprender tudo de uma vez, mas construir pequenos projetos
-        que usassem cada conceito aprendido.
-      </p>
-
-      <h2>O que aprendi com tudo isso</h2>
-      <p>
-        Consistência supera intensidade. Estudar 30 minutos por dia, todos os dias,
-        trouxe mais resultado do que maratonas ocasionais. Construir projetos reais,
-        mesmo pequenos e imperfeitos, é a forma mais rápida de aprender. E a
-        comunidade de desenvolvedores é incrível — não tenha medo de pedir ajuda.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
-          <p class="footer-desc">Artigos sobre desenvolvimento web, carreira e tecnologia.</p>
         </div>
-        <div>
-          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="curriculo.html">Currículo</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-titulo">CONTATO</h4>
-          <p style="font-size:0.85rem; color:var(--cor-texto-suave);">📧 seuemail@exemplo.com</p>
-        </div>
+        <p class="page-header__subtitulo">
+          Três artigos sobre minha trajetória, minha perspectiva profissional e
+          boas práticas de manutenção preventiva em TI.
+        </p>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="ano-footer"></span> DEV.BLOG</span>
-        <span style="color:var(--cor-neon);">Feito com ❤️ e muito CSS</span>
+    </header>
+
+    <!-- ===================== ÍNDICE DE ARTIGOS ===================== -->
+    <section class="secao" aria-label="Lista de artigos do blog" style="border-top: none; padding-top: 0;">
+      <div class="container">
+        <nav class="blog-indice" aria-label="Índice dos artigos">
+          <a class="blog-indice__item" href="#post-1">
+            <span class="blog-indice__num">01</span>
+            <span class="blog-indice__txt">Minha trajetória profissional</span>
+          </a>
+          <a class="blog-indice__item" href="#post-2">
+            <span class="blog-indice__num">02</span>
+            <span class="blog-indice__txt">Perspectiva profissional: como o desenvolvimento vai contribuir com minha carreira</span>
+          </a>
+          <a class="blog-indice__item" href="#post-3">
+            <span class="blog-indice__num">03</span>
+            <span class="blog-indice__txt">Manutenção preventiva em TI</span>
+          </a>
+        </nav>
       </div>
+    </section>
+
+    <!-- ===================== ARTIGO 1 — TRAJETÓRIA ===================== -->
+    <article class="secao artigo" id="post-1" aria-labelledby="titulo-post-1" style="border-top: none; padding-top: 0;">
+      <div class="container container--texto">
+        <p class="artigo__data">15 de maio de 2025 · Leitura de 4 min</p>
+        <h2 class="artigo__titulo" id="titulo-post-1">Minha trajetória profissional</h2>
+        <ul class="tags">
+          <li class="tag">Carreira</li>
+          <li class="tag">Trajetória</li>
+        </ul>
+
+        <p class="artigo__paragrafo">
+          Meu nome é Ivanilson Santos e minha trajetória na tecnologia começou
+          a partir da curiosidade de entender como os sites e aplicativos que eu
+          usava no dia a dia eram feitos. Essa pergunta simples — "como isso
+          funciona por dentro?" — foi o ponto de partida para tudo o que vivi até
+          aqui.
+        </p>
+
+        <h3 class="artigo__subtitulo">Os primeiros passos</h3>
+        <p class="artigo__paragrafo">
+          Comecei estudando HTML, aprendendo a estruturar páginas com tags
+          semânticas, organizar conteúdo e pensar na acessibilidade desde o
+          início. Logo depois veio o CSS, que me permitiu transformar páginas
+          simples em interfaces com identidade visual, cores, espaçamentos e
+          layouts responsivos que funcionam tanto no celular quanto no
+          computador.
+        </p>
+
+        <h3 class="artigo__subtitulo">Adicionando interatividade</h3>
+        <p class="artigo__paragrafo">
+          Quando senti que dominava o básico da estrutura e do estilo, mergulhei
+          no JavaScript. Foi aí que meus projetos ganharam vida: validação de
+          formulários, menus interativos e pequenas funcionalidades que
+          respondem às ações do usuário. Cada novo conceito aprendido virava
+          imediatamente um projeto prático para fixar o conhecimento.
+        </p>
+
+        <h3 class="artigo__subtitulo">O que aprendi até aqui</h3>
+        <p class="artigo__paragrafo">
+          Olhando para trás, percebo que a consistência foi mais importante do
+          que a velocidade. Estudar um pouco todos os dias, publicar meus
+          projetos e revisar meus próprios erros me fez evoluir de forma sólida.
+          Hoje me sinto confortável construindo páginas completas com HTML, CSS
+          e JavaScript, e essa base é o alicerce sobre o qual pretendo continuar
+          crescendo.
+        </p>
+      </div>
+    </article>
+
+    <!-- ===================== ARTIGO 2 — PERSPECTIVA ===================== -->
+    <article class="secao artigo" id="post-2" aria-labelledby="titulo-post-2">
+      <div class="container container--texto">
+        <p class="artigo__data">28 de abril de 2025 · Leitura de 4 min</p>
+        <h2 class="artigo__titulo" id="titulo-post-2">
+          Perspectiva profissional: como o desenvolvimento vai contribuir com minha carreira
+        </h2>
+        <ul class="tags">
+          <li class="tag">Carreira</li>
+          <li class="tag">Futuro</li>
+        </ul>
+
+        <p class="artigo__paragrafo">
+          Aprender desenvolvimento web mudou a forma como eu enxergo o meu
+          futuro profissional. Mais do que escrever código, o desenvolvimento me
+          deu uma maneira nova de resolver problemas, organizar ideias e
+          transformar necessidades reais em soluções concretas.
+        </p>
+
+        <h3 class="artigo__subtitulo">Uma base que abre portas</h3>
+        <p class="artigo__paragrafo">
+          HTML, CSS e JavaScript são habilidades muito valorizadas no mercado e
+          servem de porta de entrada para diversas oportunidades. Dominar a
+          construção de interfaces me permite atuar na criação de sites,
+          portfólios, páginas de divulgação e pequenas aplicações — tudo isso já
+          com o que estudei até agora.
+        </p>
+
+        <h3 class="artigo__subtitulo">Como isso fortalece minha carreira</h3>
+        <p class="artigo__paragrafo">
+          Acredito que o desenvolvimento vai contribuir com a minha carreira de
+          três formas principais: aumentando minha capacidade de resolver
+          problemas de maneira lógica, tornando meu trabalho mais autônomo (pois
+          consigo criar minhas próprias soluções) e ampliando as possibilidades
+          de atuação em um mercado que cresce todos os dias.
+        </p>
+
+        <h3 class="artigo__subtitulo">Meus próximos objetivos</h3>
+        <p class="artigo__paragrafo">
+          Meu plano é continuar aprofundando o que já sei, praticando com
+          projetos cada vez mais completos e melhorando a qualidade do meu
+          código. Quero me tornar um profissional capaz de entregar interfaces
+          bem construídas, acessíveis e agradáveis de usar, contribuindo de
+          forma real com as equipes e empresas onde eu atuar.
+        </p>
+      </div>
+    </article>
+
+    <!-- ===================== ARTIGO 3 — MANUTENÇÃO PREVENTIVA ===================== -->
+    <article class="secao artigo" id="post-3" aria-labelledby="titulo-post-3">
+      <div class="container container--texto">
+        <p class="artigo__data">10 de abril de 2025 · Leitura de 5 min</p>
+        <h2 class="artigo__titulo" id="titulo-post-3">Manutenção preventiva em TI</h2>
+        <ul class="tags">
+          <li class="tag">TI</li>
+          <li class="tag">Boas práticas</li>
+        </ul>
+
+        <p class="artigo__paragrafo">
+          A manutenção preventiva em TI é o conjunto de ações planejadas para
+          evitar que problemas aconteçam, em vez de apenas corrigi-los depois que
+          já causaram prejuízo. É a diferença entre cuidar dos equipamentos e
+          sistemas de forma contínua ou esperar a falha acontecer para só então
+          agir.
+        </p>
+
+        <h3 class="artigo__subtitulo">Por que ela é importante</h3>
+        <p class="artigo__paragrafo">
+          Quando uma empresa ou pessoa adota a manutenção preventiva, ela reduz
+          custos com reparos emergenciais, evita perda de dados e aumenta a vida
+          útil dos equipamentos. Além disso, os sistemas ficam mais estáveis e
+          seguros, o que evita interrupções no trabalho e prejuízos
+          inesperados.
+        </p>
+
+        <h3 class="artigo__subtitulo">Boas práticas de manutenção preventiva</h3>
+        <ul class="artigo__lista">
+          <li>Realizar backups frequentes e testar a restauração dos dados.</li>
+          <li>Manter os sistemas e programas sempre atualizados.</li>
+          <li>Limpar fisicamente os equipamentos para evitar superaquecimento.</li>
+          <li>Verificar periodicamente o espaço em disco e a saúde do hardware.</li>
+          <li>Usar antivírus e revisar as configurações de segurança.</li>
+          <li>Documentar tudo o que é feito para acompanhar o histórico.</li>
+        </ul>
+
+        <h3 class="artigo__subtitulo">Conclusão</h3>
+        <p class="artigo__paragrafo">
+          A manutenção preventiva é um investimento, não um gasto. Pequenas
+          rotinas de cuidado evitam grandes dores de cabeça e garantem que os
+          recursos de TI estejam sempre disponíveis quando mais precisamos deles.
+          Adotar essa cultura é essencial para qualquer ambiente que dependa de
+          tecnologia.
+        </p>
+
+        <p class="artigo__voltar"><a href="#post-1">&uarr; Voltar ao início dos artigos</a></p>
+      </div>
+    </article>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>&copy; <span id="ano"></span> Ivanilson Santos. Todos os direitos reservados.</p>
+      <ul class="rodape__sociais">
+        <li><a href="https://github.com/ivanilson-santos" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ivanilson-santos" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
 
