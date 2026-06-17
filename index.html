@@ -1,316 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ============================================================
-       index.html — Página Inicial
-       Blog Pessoal | GitHub Pages
-       ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog pessoal de tecnologia — projetos, artigos e currículo." />
-  <title>DEV.BLOG | Início</title>
+  <meta name="description" content="Portfólio de Ivanilson Santos — desenvolvedor. Projetos, currículo e blog." />
+  <meta name="theme-color" content="#0d1117" />
+  <title>Ivanilson Santos | Portfólio</title>
 
-  <!-- Google Fonts -->
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
 
-  <!-- Folha de estilo principal -->
+  <!-- Estilo -->
   <link rel="stylesheet" href="assets/css/estilo.css" />
 </head>
 <body>
+  <!-- ===================== CABEÇALHO / NAVEGAÇÃO ===================== -->
+  <header class="cabecalho">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="index.html" class="nav__logo">Ivanilson<span>.dev</span></a>
 
-  <!-- ── HEADER / NAV ──────────────────────────────────────── -->
-  <header>
-    <nav class="container">
-      <a href="index.html" class="nav-logo">
-        &lt;<span>DEV</span>.BLOG/&gt;
-      </a>
-
-      <!-- Botão hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html">Contato</a></li>
+      <ul class="nav__lista" id="menu">
+        <li><a href="index.html" class="nav__link" aria-current="page">Início</a></li>
+        <li><a href="index.html#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="curriculo.html" class="nav__link">Currículo</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="contato.html" class="nav__link">Contato</a></li>
       </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
     </nav>
   </header>
 
-  <!-- ── HERO ──────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-
-        <!-- Badge de status -->
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Disponível para projetos
+  <main>
+    <!-- ===================== INÍCIO (HERO) ===================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__texto">
+          <p class="hero__saudacao">Olá, eu sou</p>
+          <h1 class="hero__titulo">Ivanilson Santos</h1>
+          <p class="hero__descricao">
+            Estudante de Desenvolvimento de Sistemas apaixonado por criar
+            aplicações web modernas, acessíveis e bem estruturadas. Bem-vindo
+            ao meu portfólio.
+          </p>
+          <div class="hero__acoes">
+            <a href="index.html#projetos" class="btn btn--primario">Ver projetos</a>
+            <a href="contato.html" class="btn btn--secundario">Entrar em contato</a>
+          </div>
         </div>
-
-        <!-- Título principal -->
-        <h1 class="hero-titulo">
-          Olá, sou
-          <span class="destaque">Seu Nome</span>
-        </h1>
-
-        <!-- Typewriter dinâmico -->
-        <p class="hero-subtitulo">
-          <span id="typewriter">Desenvolvedor Full Stack</span>
-          <span style="color:var(--cor-neon); animation: piscar 1s infinite">|</span>
-        </p>
-
-        <p style="color:var(--cor-texto-suave); margin-bottom:2.5rem; max-width:520px;">
-          Apaixonado por código limpo, interfaces incríveis e resolver problemas
-          com tecnologia. Aqui compartilho projetos, artigos e minha jornada no
-          desenvolvimento web.
-        </p>
-
-        <!-- Botões CTA -->
-        <div class="hero-btns">
-          <a href="blog.html" class="btn btn-secundario">
-            📝 Ver Blog
-          </a>
-          <a href="curriculo.html" class="btn btn-primario">
-            📄 Currículo
-          </a>
-          <a href="contato.html" class="btn btn-acento btn-sm">
-            💬 Contato
-          </a>
+        <div class="hero__foto">
+          <img src="assets/imagens/foto-perfil.jpg" alt="Foto de perfil de Ivanilson Santos" />
         </div>
       </div>
+    </section>
 
-      <!-- Foto de perfil -->
-      <div class="hero-foto" aria-hidden="true">
-        <!-- Substitua pelo caminho da sua foto -->
-        <!-- <img src="assets/imagens/foto-perfil.jpg" alt="Foto de perfil" /> -->
-        <div class="hero-foto-placeholder">👨‍💻</div>
-      </div>
-    </div>
-  </section>
+    <!-- ===================== BLOG EM DESTAQUE ===================== -->
+    <section class="secao" id="blog-destaque" aria-labelledby="titulo-blog">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo" id="titulo-blog">Últimos posts do blog</h2>
+          <p class="secao__subtitulo">O que tenho escrito e estudado recentemente.</p>
+        </header>
 
-  <!-- ── SOBRE ──────────────────────────────────────────────── -->
-  <section id="sobre">
-    <div class="container">
-      <h2 class="section-title revelar">// Sobre Mim</h2>
+        <div class="grade">
+          <article class="post-card">
+            <p class="post-card__data">15 de maio de 2025</p>
+            <h3 class="post-card__titulo">Minha trajetória profissional</h3>
+            <p class="post-card__resumo">
+              Como começou meu interesse pela tecnologia e o caminho que percorri
+              estudando HTML, CSS e JavaScript até aqui.
+            </p>
+            <a href="blog.html#post-1" class="post-card__link">Ler mais &rarr;</a>
+          </article>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
-        <div class="revelar">
-          <p>
-            Estudante de <strong style="color:var(--cor-neon)">Desenvolvimento Web</strong>
-            apaixonado por criar experiências digitais memoráveis. Tenho me dedicado ao
-            estudo de HTML, CSS e JavaScript para construir sites modernos e responsivos.
-          </p>
-          <p>
-            Acredito que um bom código vai além de funcionar — ele precisa ser legível,
-            organizado e sustentável. Busco constantemente evoluir como desenvolvedor e
-            contribuir com projetos que causem impacto real.
-          </p>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub Pages</span>
-            <span class="tag">Responsive Design</span>
-          </div>
+          <article class="post-card">
+            <p class="post-card__data">28 de abril de 2025</p>
+            <h3 class="post-card__titulo">Perspectiva profissional</h3>
+            <p class="post-card__resumo">
+              Como o desenvolvimento web vai contribuir com a minha carreira e
+              quais são os meus próximos objetivos na área.
+            </p>
+            <a href="blog.html#post-2" class="post-card__link">Ler mais &rarr;</a>
+          </article>
+
+          <article class="post-card">
+            <p class="post-card__data">10 de abril de 2025</p>
+            <h3 class="post-card__titulo">Manutenção preventiva em TI</h3>
+            <p class="post-card__resumo">
+              O que é, por que ela é importante e boas práticas para evitar
+              problemas antes que eles aconteçam.
+            </p>
+            <a href="blog.html#post-3" class="post-card__link">Ler mais &rarr;</a>
+          </article>
         </div>
 
-        <!-- Stats -->
-        <div class="revelar" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">3+</div>
-            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Projetos Concluídos</div>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">3</div>
-            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Posts no Blog</div>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-acento); text-shadow:var(--sombra-acento);">100%</div>
-            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">HTML/CSS Puro</div>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem; font-family:var(--fonte-titulo); color:var(--cor-neon); text-shadow:var(--sombra-neon);">∞</div>
-            <div style="font-size:0.85rem; color:var(--cor-texto-suave);">Vontade de Aprender</div>
-          </div>
+        <div style="margin-top: 2rem;">
+          <a href="blog.html" class="btn btn--secundario">Ver todos os posts</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── PROJETOS ───────────────────────────────────────────── -->
-  <section id="projetos">
-    <div class="container">
-      <h2 class="section-title revelar">// Projetos</h2>
-
-      <div class="grid-projetos">
-        <!-- Projeto 1 -->
-        <div class="card card-projeto revelar">
-          <span class="projeto-icon">🌐</span>
-          <h3>Site de Portfólio</h3>
-          <p>
-            Site pessoal completo com seções de projetos, blog e currículo.
-            Desenvolvido com HTML, CSS e JavaScript puros.
+    <!-- ===================== PROJETOS ===================== -->
+    <section class="secao" id="projetos" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo" id="titulo-projetos">Meus projetos</h2>
+          <p class="secao__subtitulo">
+            Trabalhos desenvolvidos ao longo do curso, com disciplina e tecnologias.
           </p>
-          <div class="projeto-tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <div class="projeto-links">
-            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
-            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
-          </div>
-        </div>
+        </header>
 
-        <!-- Projeto 2 -->
-        <div class="card card-projeto revelar">
-          <span class="projeto-icon">📋</span>
-          <h3>To-Do List App</h3>
-          <p>
-            Aplicação de lista de tarefas com funcionalidades de adicionar,
-            editar, excluir e filtrar por status.
-          </p>
-          <div class="projeto-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">LocalStorage</span>
-            <span class="tag">CSS Grid</span>
-          </div>
-          <div class="projeto-links">
-            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
-            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
-          </div>
-        </div>
+        <div class="grade">
+          <article class="card">
+            <p class="card__disciplina">Desenvolvimento Web</p>
+            <h3 class="card__titulo">Landing Page</h3>
+            <p class="card__texto">
+              Página de divulgação com seções bem estruturadas, layout
+              responsivo e foco em apresentar um produto ou serviço de forma
+              clara e atrativa.
+            </p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </article>
 
-        <!-- Projeto 3 -->
-        <div class="card card-projeto revelar">
-          <span class="projeto-icon">🌤️</span>
-          <h3>Previsão do Tempo</h3>
-          <p>
-            Aplicação de clima que consome API externa, exibindo
-            temperatura, umidade e previsão dos próximos dias.
-          </p>
-          <div class="projeto-tags">
-            <span class="tag">API REST</span>
-            <span class="tag">Fetch</span>
-            <span class="tag">Async/Await</span>
-          </div>
-          <div class="projeto-links">
-            <a href="#" class="btn btn-primario btn-sm">🔗 Demo</a>
-            <a href="#" class="btn btn-acento btn-sm">📂 Código</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <article class="card">
+            <p class="card__disciplina">Desenvolvimento Web</p>
+            <h3 class="card__titulo">Site de Cinema</h3>
+            <p class="card__texto">
+              Site para exibição de filmes em cartaz, com cards de filmes,
+              navegação intuitiva e visual moderno inspirado em plataformas de
+              cinema.
+            </p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </article>
 
-  <!-- ── BLOG (PRÉVIA) ──────────────────────────────────────── -->
-  <section id="blog-preview">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
-        <h2 class="section-title" style="margin-bottom:0;">// Últimos Posts</h2>
-        <a href="blog.html" class="btn btn-primario btn-sm">Ver todos →</a>
-      </div>
+          <article class="card">
+            <p class="card__disciplina">Desenvolvimento Web</p>
+            <h3 class="card__titulo">Cardápio de Hamburgueria</h3>
+            <p class="card__texto">
+              Cardápio digital de uma hamburgueria, com lista de produtos,
+              imagens e preços organizados em um layout apetitoso e responsivo.
+            </p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </article>
 
-      <div class="grid-blog">
-        <!-- Post 1 -->
-        <article class="card card-blog revelar" data-categoria="html-css">
-          <div class="card-blog-img">📐</div>
-          <div class="meta">
-            <span>📅 10 Jun 2025</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
-          <h3>CSS Grid vs Flexbox: Quando usar cada um?</h3>
-          <p>
-            Entenda as diferenças fundamentais entre os dois modelos de layout
-            do CSS e quando aplicar cada um nos seus projetos.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
+          <article class="card">
+            <p class="card__disciplina">Desenvolvimento Web</p>
+            <h3 class="card__titulo">Formulário</h3>
+            <p class="card__texto">
+              Formulário com validação dos campos em JavaScript, mensagens de
+              erro claras e feedback de envio para o usuário.
+            </p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </article>
 
-        <!-- Post 2 -->
-        <article class="card card-blog revelar" data-categoria="javascript">
-          <div class="card-blog-img">⚡</div>
-          <div class="meta">
-            <span>📅 03 Jun 2025</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <h3>Async/Await: Simplificando código assíncrono</h3>
-          <p>
-            Como usar async/await para tornar seu código JavaScript mais
-            legível e fácil de manter, substituindo callbacks e Promises.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="card card-blog revelar" data-categoria="carreira">
-          <div class="card-blog-img">🚀</div>
-          <div class="meta">
-            <span>📅 28 Mai 2025</span>
-            <span class="tag">Carreira</span>
-          </div>
-          <h3>Minha jornada aprendendo desenvolvimento web</h3>
-          <p>
-            Como comecei do zero, os recursos que usei, os desafios que enfrentei
-            e o que aprendi nos primeiros meses estudando programação.
-          </p>
-          <a href="#" class="ler-mais">Ler artigo →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">&lt;<span style="color:var(--cor-acento)">DEV</span>.BLOG/&gt;</div>
-          <p class="footer-desc">
-            Blog pessoal sobre desenvolvimento web, tecnologia e
-            minha jornada como desenvolvedor. Feito com HTML, CSS e JS puros.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer-titulo">NAVEGAÇÃO</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="curriculo.html">Currículo</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-titulo">REDES</h4>
-          <div class="redes-sociais" style="margin-bottom:1rem;">
-            <a href="#" class="rede" aria-label="GitHub" title="GitHub">GH</a>
-            <a href="#" class="rede" aria-label="LinkedIn" title="LinkedIn">LI</a>
-            <a href="#" class="rede" aria-label="Twitter" title="Twitter">TW</a>
-          </div>
-          <p style="font-size:0.82rem; color:var(--cor-texto-suave);">
-            📧 seuemail@exemplo.com
-          </p>
+          <article class="card">
+            <p class="card__disciplina">Desenvolvimento Web</p>
+            <h3 class="card__titulo">Dicionário Técnico Inglês-Português</h3>
+            <p class="card__texto">
+              Landing page de um dicionário de termos técnicos ligados à
+              tecnologia, com tradução de inglês para português e busca dos
+              termos.
+            </p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </article>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="footer-bottom">
-        <span>© <span id="ano-footer"></span> DEV.BLOG — Todos os direitos reservados</span>
-        <span style="color:var(--cor-neon); font-size:0.75rem;">Feito com ❤️ e muita ☕</span>
-      </div>
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>&copy; <span id="ano"></span> Ivanilson Santos. Todos os direitos reservados.</p>
+      <ul class="rodape__sociais">
+        <li><a href="https://github.com/ivanilson-santos" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ivanilson-santos" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
 
-  <!-- Script principal -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
